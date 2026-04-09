@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Audit for SMEs | ROTAS Automation</title>
+    <meta name="description" content="Book a free 30-minute AI audit. We'll show you exactly how to cut costs, grow revenue, and automate your business. 90+ SMEs transformed across 8 countries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0f1a'/%3E%3Cpath d='M16 6L8 10.5v11L16 26l8-4.5v-11z' fill='none' stroke='%2300d4aa' stroke-width='1.5'/%3E%3Cpath d='M16 6v20M8 10.5L24 21.5M24 10.5L8 21.5' stroke='%2300d4aa' stroke-width='1' opacity='.4'/%3E%3C/svg%3E">
+    <style>
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --bg:#fafbfc;--bg2:#f3f4f6;--bg3:#ffffff;--bg4:#e5e7eb;
+            --bg-dark:#0c0f1a;--bg-dark-2:#12162a;--bg-dark-3:#181d36;
+            --text:#0c0f1a;--text-mid:#4b5563;--text-dim:#9ca3af;
+            --text-inverse:#ffffff;--text-inverse-mid:rgba(255,255,255,.75);--text-inverse-dim:rgba(255,255,255,.5);
+            --emerald:#00d4aa;--emerald-dark:#00b894;--emerald-glow:rgba(0,212,170,.25);
+            --red:#ef4444;--red-bg:rgba(239,68,68,.08);--amber:#f59e0b;
+            --border:#e5e7eb;--border-light:#f0f1f3;
+            --sans:'Inter',system-ui,sans-serif;--serif:'DM Serif Display',Georgia,serif;
+            --max-w:760px;--max-w-wide:1080px;
+        }
+        html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+        body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+        a{color:var(--emerald);text-decoration:none}
+
+        /* ── UTILITY ── */
+        .container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+        .container-wide{max-width:var(--max-w-wide);margin:0 auto;padding:0 24px}
+        .section{padding:80px 0}
+        .text-center{text-align:center}
+        .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--emerald);margin-bottom:16px}
+        .highlight{color:var(--emerald)}
+        .strike{text-decoration:line-through;color:var(--text-dim)}
+
+        /* ── TOPBAR ── */
+        .topbar{background:var(--emerald);color:var(--bg-dark);text-align:center;padding:10px 16px;font-size:13px;font-weight:600;letter-spacing:.3px}
+        .topbar span{font-weight:800}
+        .topbar a{color:var(--bg-dark)}
+
+        /* ── HERO ── */
+        .hero{position:relative;padding:70px 0 80px;overflow:hidden;background:var(--bg-dark);color:var(--text-inverse)}
+        .hero-canvas{position:absolute;inset:0;z-index:0;pointer-events:none}
+        .hero .container{position:relative;z-index:1}
+        @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+        .hero h1{font-family:var(--serif);font-size:clamp(32px,5.5vw,54px);line-height:1.15;font-weight:400;margin-bottom:22px;max-width:700px;color:var(--text-inverse)}
+        .hero h1 em{font-style:italic;color:var(--emerald)}
+        .hero-sub{font-size:18px;color:var(--text-inverse-mid);max-width:580px;margin-bottom:36px;line-height:1.75}
+        .hero-stat-row{display:grid;grid-template-columns:repeat(3,auto);gap:36px;margin-bottom:40px;justify-content:start}
+        .hero-stat{display:flex;align-items:baseline;gap:8px}
+        .hero-stat .num{font-size:36px;font-weight:800;color:var(--emerald);white-space:nowrap}
+        .hero-stat .lbl{font-size:14px;color:var(--text-inverse-dim);max-width:120px;line-height:1.4}
+
+        /* ── CTA BUTTON ── */
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--emerald);color:var(--bg-dark);font-size:16px;font-weight:700;padding:16px 36px;border-radius:999px;border:none;cursor:pointer;transition:all .25s;letter-spacing:.3px;text-transform:none}
+        .cta-btn:hover{background:#00eabb;transform:translateY(-2px);box-shadow:0 8px 30px var(--emerald-glow)}
+        .cta-btn svg{width:18px;height:18px;flex-shrink:0}
+        .cta-sub{font-size:13px;color:var(--text-dim);margin-top:12px}
+        .cta-sub b{color:var(--text-mid)}
+        .hero .cta-sub{color:var(--text-inverse-dim)}
+        .hero .cta-sub b{color:var(--text-inverse-mid)}
+
+        /* ── URGENCY BAR ── */
+        .urgency-bar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 0;text-align:center}
+        .urgency-bar p{font-size:20px;font-weight:600;color:var(--text)}
+        .urgency-bar p span{color:var(--emerald-dark);font-weight:800}
+        .urgency-bar .sub{font-size:14px;color:var(--text-dim);margin-top:8px}
+
+        /* ── WHO WE ARE ── */
+        .who-bar{background:var(--bg);padding:56px 0;text-align:center}
+        .who-bar h2{font-family:var(--serif);font-size:clamp(22px,3vw,30px);line-height:1.35;margin-bottom:12px}
+        .who-bar p{font-size:16px;color:var(--text-mid);max-width:620px;margin:0 auto;line-height:1.75}
+        .who-stats{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+        .who-stat{text-align:center}
+        .who-stat .val{font-size:32px;font-weight:800;color:var(--emerald-dark);line-height:1}
+        .who-stat .lbl{font-size:13px;color:var(--text-dim);margin-top:4px}
+
+        /* ── PROBLEM SECTION ── */
+        .problem{background:var(--bg3)}
+        .problem h2{font-family:var(--serif);font-size:clamp(26px,4vw,38px);line-height:1.25;margin-bottom:18px}
+        .problem-text{font-size:16px;color:var(--text-mid);margin-bottom:32px;line-height:1.8}
+        .pain-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:40px}
+        .pain-list li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--text-mid);line-height:1.6}
+        .pain-list li .icon{flex-shrink:0;width:28px;height:28px;background:var(--red-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:2px}
+        .pain-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:48px 0}
+
+        /* ── STATS / PROOF ── */
+        .stats-section{background:var(--bg-dark);color:var(--text-inverse)}
+        .stats-section .eyebrow{color:var(--emerald)}
+        .stats-section h2{color:var(--text-inverse)}
+        .stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px}
+        .stat-card{background:var(--bg-dark-2);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:36px 28px;text-align:center}
+        .stat-card .big{font-size:48px;font-weight:800;color:var(--emerald);line-height:1;margin-bottom:12px}
+        .stat-card h4{font-size:16px;font-weight:600;margin-bottom:8px;color:var(--text-inverse)}
+        .stat-card p{font-size:14px;color:var(--text-inverse-dim);line-height:1.6}
+        .stat-source{font-size:12px;color:var(--text-inverse-dim);margin-top:8px;font-style:italic}
+
+        /* ── PERFORMANCE GAP ── */
+        .gap-section{background:var(--bg2);text-align:center}
+        .gap-visual{max-width:600px;margin:40px auto 0;display:flex;flex-direction:column;gap:20px}
+        .gap-year{display:grid;grid-template-columns:60px 1fr;gap:12px;align-items:center;text-align:left}
+        .gap-year .yr{font-size:14px;font-weight:700;color:var(--text-mid)}
+        .gap-bars{display:flex;flex-direction:column;gap:6px}
+        .gap-bar{height:28px;border-radius:6px;display:flex;align-items:center;padding:0 12px;font-size:12px;font-weight:700;transition:width .8s cubic-bezier(.4,0,.2,1)}
+        .gap-bar.adopter{background:linear-gradient(90deg,var(--emerald),#00eabb);color:var(--bg-dark)}
+        .gap-bar.other{background:rgba(0,0,0,.06);color:var(--text-dim)}
+        .gap-legend{display:flex;gap:24px;justify-content:center;margin-top:24px;font-size:13px;color:var(--text-dim)}
+        .gap-legend span{display:flex;align-items:center;gap:8px}
+        .gap-legend .dot-g{width:10px;height:10px;border-radius:3px;background:var(--emerald)}
+        .gap-legend .dot-w{width:10px;height:10px;border-radius:3px;background:rgba(0,0,0,.1)}
+        .gap-caption{font-size:13px;color:var(--text-dim);margin-top:24px;font-style:italic}
+
+        /* ── AUDIT FORM SECTION ── */
+        .audit-section{background:var(--bg-dark);color:var(--text-inverse);padding:80px 0}
+        .audit-section .eyebrow{color:var(--emerald)}
+        .audit-section h2{color:var(--text-inverse)}
+        .audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;max-width:960px;margin:0 auto}
+        .audit-left h3{font-family:var(--serif);font-size:26px;line-height:1.3;margin-bottom:16px;color:var(--text-inverse)}
+        .audit-left p{font-size:15px;color:var(--text-inverse-mid);line-height:1.7;margin-bottom:20px}
+        .audit-expect{list-style:none;display:flex;flex-direction:column;gap:14px}
+        .audit-expect li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--text-inverse-mid);line-height:1.6}
+        .audit-expect li .check{flex-shrink:0;color:var(--emerald);font-size:16px;margin-top:2px;font-weight:700}
+        .audit-form-box{background:var(--bg-dark-2);border:2px solid rgba(0,212,170,.2);border-radius:20px;padding:36px 28px}
+        .audit-form-box h4{font-family:var(--serif);font-size:22px;margin-bottom:6px;text-align:center;color:var(--text-inverse)}
+        .audit-form-box .form-sub{font-size:13px;color:var(--text-inverse-dim);text-align:center;margin-bottom:20px}
+        .audit-form{display:flex;flex-direction:column;gap:12px}
+        .audit-form input,.audit-form select{background:var(--bg-dark-3);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 18px;font-size:15px;color:var(--text-inverse);font-family:var(--sans);outline:none;transition:border-color .2s}
+        .audit-form input:focus,.audit-form select:focus{border-color:var(--emerald)}
+        .audit-form input::placeholder{color:var(--text-inverse-dim)}
+        .audit-form select{cursor:pointer;appearance:none;color:var(--text-inverse-dim)}
+        .audit-secure{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-inverse-dim);margin-top:8px;justify-content:center}
+        .audit-secure svg{width:14px;height:14px;color:var(--emerald);flex-shrink:0}
+        @media(max-width:768px){.audit-grid{grid-template-columns:1fr;gap:32px}}
+
+        /* ── WHAT YOU GET (GODFATHER) ── */
+        .godfather{background:var(--bg2)}
+        .offer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:40px}
+        .offer-card{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:32px 24px;transition:border-color .3s;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+        .offer-card:hover{border-color:rgba(0,212,170,.4)}
+        .offer-card .icon-wrap{width:44px;height:44px;background:rgba(0,212,170,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+        .offer-card h4{font-size:17px;font-weight:700;margin-bottom:8px}
+        .offer-card p{font-size:14px;color:var(--text-mid);line-height:1.65}
+        .offer-card .value{font-size:12px;color:var(--emerald-dark);font-weight:600;margin-top:12px}
+
+        /* ── SOCIAL PROOF ── */
+        .proof{background:var(--bg3)}
+        .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px}
+        .t-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 24px}
+        .t-card .stars{color:var(--amber);font-size:14px;letter-spacing:2px;margin-bottom:12px}
+        .t-card blockquote{font-size:14.5px;color:var(--text-mid);line-height:1.7;margin-bottom:16px;font-style:italic}
+        .t-card .author{font-size:13px;font-weight:600;color:var(--text)}
+        .t-card .role{font-size:12px;color:var(--text-dim)}
+
+        /* ── SCARCITY / FINAL CTA ── */
+        .final-cta{background:var(--bg-dark);color:var(--text-inverse);padding:80px 0;text-align:center}
+        .final-cta h2{font-family:var(--serif);font-size:clamp(28px,4.5vw,42px);line-height:1.2;margin-bottom:16px;color:var(--text-inverse)}
+        .final-cta .sub{font-size:16px;color:var(--text-inverse-mid);max-width:520px;margin:0 auto 14px;line-height:1.7}
+        .spots-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);border-radius:999px;padding:8px 20px;font-size:14px;font-weight:600;color:var(--red);margin-bottom:28px}
+        .spots-badge .dot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:pulse-dot 1.8s infinite}
+        .final-checklist{list-style:none;display:flex;flex-direction:column;gap:8px;text-align:left;max-width:380px;margin:0 auto 36px;font-size:14.5px;color:var(--text-inverse-mid)}
+        .final-checklist li::before{content:'✓ ';color:var(--emerald);font-weight:700}
+        .final-cta .cta-sub{color:var(--text-inverse-dim)}
+        .final-cta .cta-sub b{color:var(--text-inverse-mid)}
+
+        /* ── FAQ ── */
+        .faq{background:var(--bg2)}
+        .faq-list{max-width:640px;margin:32px auto 0;display:flex;flex-direction:column;gap:12px}
+        .faq-item{background:var(--bg3);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+        .faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-size:15px;font-weight:600;gap:12px;transition:color .2s}
+        .faq-q:hover{color:var(--emerald-dark)}
+        .faq-q .arrow{transition:transform .3s;font-size:18px;flex-shrink:0;color:var(--text-dim)}
+        .faq-item.open .faq-q .arrow{transform:rotate(180deg)}
+        .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 22px}
+        .faq-item.open .faq-a{max-height:300px}
+        .faq-a p{padding:0 0 18px;font-size:14px;color:var(--text-mid);line-height:1.7}
+
+        /* ── FOOTER ── */
+        .footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 0;text-align:center}
+        .footer p{font-size:13px;color:var(--text-dim)}
+        .footer a{color:var(--emerald-dark)}
+
+        /* ── STICKY MOBILE CTA ── */
+        .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--bg3);border-top:1px solid var(--border);padding:14px 20px;z-index:100;text-align:center;box-shadow:0 -4px 16px rgba(0,0,0,.08)}
+        .sticky-cta .cta-btn{width:100%;justify-content:center;padding:14px 24px;font-size:15px}
+
+        /* ── SCROLL REVEAL ── */
+        .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+        .reveal.visible{opacity:1;transform:translateY(0)}
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:768px){
+            .section{padding:56px 0}
+            .hero{padding:48px 0 60px}
+            .hero-stat-row{grid-template-columns:repeat(3,1fr);gap:16px}
+            .hero-stat .num{font-size:24px}
+            .hero-stat .lbl{font-size:12px;max-width:90px}
+            .hvco-box{padding:32px 22px}
+            .guarantee-box{padding:32px 22px}
+            .offer-grid{grid-template-columns:1fr}
+            .testimonial-grid{grid-template-columns:1fr}
+            .stat-cards{grid-template-columns:1fr}
+            .gap-visual{padding:0 8px}
+            .sticky-cta{display:block}
+            .footer{padding-bottom:80px}
+        }
+        @media(max-width:480px){
+            .hero h1{font-size:28px}
+            .hero-sub{font-size:16px}
+            .container{padding:0 18px}
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════ TOPBAR ═══════════ -->
+<div class="topbar">
+    <span>87% of organisations</span> are investing in AI this year. Are you one of them? <a href="#audit" style="color:var(--bg-dark);text-decoration:underline;margin-left:4px">Book your free audit &rarr;</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="container" style="position:relative;z-index:1">
+        <h1>Your Business Is Bleeding Money Each Day You <em>Don't</em> Automate</h1>
+        <p class="hero-sub">We build and implement low-cost AI systems for SMEs &mdash; helping you cut costs, grow revenue, and outperform your competition. Across <b style="color:var(--emerald)">8 countries</b> and <b style="color:var(--emerald)">90+ businesses transformed</b>.</p>
+        <div class="hero-stat-row">
+            <div class="hero-stat"><span class="num">80+</span><span class="lbl">Hours saved per week</span></div>
+            <div class="hero-stat"><span class="num">45</span><span class="lbl">Days to see first ROI</span></div>
+            <div class="hero-stat"><span class="num">30%+</span><span class="lbl">Avg revenue growth</span></div>
+        </div>
+        <a href="#audit" class="cta-btn" style="font-size:18px;padding:18px 44px">
+            Book Your Free Audit &rarr;
+        </a>
+        <p class="cta-sub">30-minute strategy call &mdash; <b>100% free. Zero obligation. Actionable insights.</b></p>
+    </div>
+</section>
+
+<!-- ═══════════ URGENCY BAR ═══════════ -->
+<div class="urgency-bar">
+    <p>The performance gap between AI adopters and everyone else is <span>widening every quarter</span></p>
+    <p class="sub">Global AI Outlook 2025</p>
+</div>
+
+<!-- ═══════════ WHO WE ARE ═══════════ -->
+<section class="who-bar">
+    <div class="container reveal">
+        <span class="eyebrow">Who we are</span>
+        <h2>We Build &amp; Implement <span class="highlight">Low-Cost AI Systems</span> for SMEs</h2>
+        <p>ROTAS Automation helps small and medium businesses automate their operations with affordable, high-impact AI solutions &mdash; no tech team required. From lead generation to operations, we handle everything so you can focus on growth.</p>
+        <div class="who-stats">
+            <div class="who-stat"><div class="val">90+</div><div class="lbl">Businesses Transformed</div></div>
+            <div class="who-stat"><div class="val">8</div><div class="lbl">Countries</div></div>
+            <div class="who-stat"><div class="val">80+</div><div class="lbl">Hours Saved / Week</div></div>
+            <div class="who-stat"><div class="val">30%+</div><div class="lbl">Avg Revenue Growth</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ THE PROBLEM (Agitation) ═══════════ -->
+<section class="problem section">
+    <div class="container reveal">
+        <span class="eyebrow">The hard truth</span>
+        <h2>While You're "Thinking About It," <br>Your Competition Is <span class="highlight">Already Doing It</span></h2>
+        <p class="problem-text">Right now, 87% of organisations worldwide are investing in AI automation. That means nearly 9 out of 10 of your competitors are actively finding ways to do more, faster, and cheaper &mdash; while you're stuck doing things the old way.</p>
+        <ul class="pain-list">
+            <li><span class="icon">&#128337;</span> <span>You're spending <b>65+ hours a week</b> on repetitive tasks that AI could handle in minutes &mdash; data entry, invoice processing, customer follow-ups, reporting</span></li>
+            <li><span class="icon">&#128176;</span> <span>You're <b>leaving revenue on the table</b> &mdash; slow response times, missed follow-ups, and bottlenecks that stop you from scaling</span></li>
+            <li><span class="icon">&#128200;</span> <span>Your competitors who adopted AI are already seeing <b>30%+ revenue growth</b> &mdash; they're quoting faster, converting more leads, and winning customers you used to have</span></li>
+            <li><span class="icon">&#128556;</span> <span>You <b>know you need to act</b> but don't know where to start, who to trust, or what AI even makes sense for your specific business</span></li>
+        </ul>
+        <p class="problem-text"><b>This isn't a future problem. It's happening right now.</b> Every week you delay is another week of lost revenue and wasted overhead. But here's the good news &mdash; it's not too late. And it's far simpler than you think.</p>
+        <div class="text-center" style="margin-top:8px">
+            <a href="#audit" class="cta-btn">Book Free Audit &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ STATS ═══════════ -->
+<section class="stats-section section">
+    <div class="container-wide reveal">
+        <div class="text-center">
+            <span class="eyebrow">The numbers don't lie</span>
+            <h2 style="font-family:var(--serif);font-size:clamp(26px,4vw,36px);line-height:1.25">AI Adoption Is No Longer Optional</h2>
+        </div>
+        <div class="stat-cards">
+            <div class="stat-card">
+                <div class="big">87%</div>
+                <h4>Organisations Investing in AI</h4>
+                <p>Nearly 9 out of 10 companies globally are actively investing in AI solutions this year</p>
+                <div class="stat-source">Global AI Outlook 2025</div>
+            </div>
+            <div class="stat-card">
+                <div class="big">40%</div>
+                <h4>Cost Reduction</h4>
+                <p>Companies implementing AI automation report up to 40% reduction in operational costs within the first year</p>
+                <div class="stat-source">McKinsey Global Institute</div>
+            </div>
+            <div class="stat-card">
+                <div class="big">$15.7T</div>
+                <h4>AI Economy by 2030</h4>
+                <p>AI is projected to contribute $15.7 trillion to the global economy &mdash; businesses not adopting will be left behind</p>
+                <div class="stat-source">PwC Global AI Study</div>
+            </div>
+            <div class="stat-card">
+                <div class="big">30%+</div>
+                <h4>Revenue Growth With Us</h4>
+                <p>Businesses we've worked with have grown revenue by 30%+ after implementing our AI automation solutions</p>
+                <div class="stat-source">ROTAS Automation Client Data</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ PERFORMANCE GAP VISUAL ═══════════ -->
+<section class="gap-section section">
+    <div class="container reveal">
+        <span class="eyebrow">The widening gap</span>
+        <h2 style="font-family:var(--serif);font-size:clamp(24px,3.5vw,34px);line-height:1.3">AI Adopters vs. Everyone Else</h2>
+        <p style="color:var(--text-dim);margin-top:8px;font-size:15px">Productivity & efficiency performance index (quarterly)</p>
+        <div class="gap-visual">
+            <div class="gap-year">
+                <span class="yr">Q1 '23</span>
+                <div class="gap-bars">
+                    <div class="gap-bar adopter" style="width:55%">AI Adopters</div>
+                    <div class="gap-bar other" style="width:48%">Others</div>
+                </div>
+            </div>
+            <div class="gap-year">
+                <span class="yr">Q3 '23</span>
+                <div class="gap-bars">
+                    <div class="gap-bar adopter" style="width:64%">AI Adopters</div>
+                    <div class="gap-bar other" style="width:46%">Others</div>
+                </div>
+            </div>
+            <div class="gap-year">
+                <span class="yr">Q1 '24</span>
+                <div class="gap-bars">
+                    <div class="gap-bar adopter" style="width:74%">AI Adopters</div>
+                    <div class="gap-bar other" style="width:44%">Others</div>
+                </div>
+            </div>
+            <div class="gap-year">
+                <span class="yr">Q3 '24</span>
+                <div class="gap-bars">
+                    <div class="gap-bar adopter" style="width:85%">AI Adopters</div>
+                    <div class="gap-bar other" style="width:42%">Others</div>
+                </div>
+            </div>
+            <div class="gap-year">
+                <span class="yr">Q1 '25</span>
+                <div class="gap-bars">
+                    <div class="gap-bar adopter" style="width:96%">AI Adopters</div>
+                    <div class="gap-bar other" style="width:39%">Others</div>
+                </div>
+            </div>
+        </div>
+        <div class="gap-legend">
+            <span><span class="dot-g"></span> AI Adopters</span>
+            <span><span class="dot-w"></span> Non-Adopters</span>
+        </div>
+        <p class="gap-caption">The gap widens every quarter. Where does your business sit?</p>
+    </div>
+</section>
+
+<!-- ═══════════ WHAT YOU GET (Audit Details) ═══════════ -->
+<section class="godfather section">
+    <div class="container-wide reveal">
+        <div class="text-center" style="margin-bottom:12px">
+            <span class="eyebrow">What you'll walk away with</span>
+            <h2 style="font-family:var(--serif);font-size:clamp(26px,4vw,38px);line-height:1.2;margin-bottom:14px">This Isn't a Sales Call. It's a <span class="highlight">Full Strategy Session.</span></h2>
+            <p style="color:var(--text-mid);max-width:620px;margin:0 auto;font-size:16px;line-height:1.7">In 30 minutes, our automation specialists will analyse your operations and hand you a custom roadmap &mdash; showing exactly where to cut costs <b>and</b> where to unlock new revenue. Whether you work with us or not, you keep everything.</p>
+        </div>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <div class="icon-wrap">&#128269;</div>
+                <h4>Full Operations Audit</h4>
+                <p>We map your workflows and pinpoint the exact bottlenecks draining your time, money, and growth potential right now.</p>
+            </div>
+            <div class="offer-card">
+                <div class="icon-wrap">&#128200;</div>
+                <h4>Revenue Growth Blueprint</h4>
+                <p>Discover untapped revenue opportunities &mdash; faster lead response, automated upsells, and AI-powered sales workflows that convert more.</p>
+            </div>
+            <div class="offer-card">
+                <div class="icon-wrap">&#128176;</div>
+                <h4>Cost Savings Breakdown</h4>
+                <p>A personalised model showing exactly how much you'll save &mdash; reduced overhead, fewer errors, and eliminated manual busywork.</p>
+            </div>
+            <div class="offer-card">
+                <div class="icon-wrap">&#128640;</div>
+                <h4>Implementation Roadmap</h4>
+                <p>A prioritised, week-by-week action plan with expected ROI at each stage &mdash; so you know exactly what to do and when.</p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top:40px">
+            <a href="#audit" class="cta-btn" style="font-size:18px;padding:18px 44px">
+                Book Free Audit Now &rarr;
+            </a>
+            <p class="cta-sub">30-minute call &middot; 100% free &middot; No obligation &middot; No hard sell</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ SOCIAL PROOF ═══════════ -->
+<section class="proof section">
+    <div class="container-wide reveal">
+        <div class="text-center">
+            <span class="eyebrow">Don't take our word for it</span>
+            <h2 style="font-family:var(--serif);font-size:clamp(26px,4vw,36px);line-height:1.25">Real Results From Real Businesses</h2>
+        </div>
+        <div class="testimonial-grid">
+            <div class="t-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"We automated our entire invoicing and follow-up workflow. What used to take 3 staff members now runs on autopilot. We saved over $180,000 in the first year alone."</blockquote>
+                <div class="author">James Mitchell</div>
+                <div class="role">CEO, Mitchell Logistics &mdash; UAE</div>
+            </div>
+            <div class="t-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"I was sceptical about AI for our clinic. Within 2 weeks of the audit, we had automated patient scheduling and reminders. No-shows dropped 62%. Best decision we've made."</blockquote>
+                <div class="author">Dr. Sarah Al-Farsi</div>
+                <div class="role">Director, Al-Farsi Medical Group &mdash; KSA</div>
+            </div>
+            <div class="t-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"ROTAS found inefficiencies we didn't even know existed. The ROI hit within 14 days &mdash; not the 6 months other firms promised. They actually deliver."</blockquote>
+                <div class="author">Raj Patel</div>
+                <div class="role">Operations Manager, Patel Manufacturing &mdash; India</div>
+            </div>
+            <div class="t-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"Their AI agents helped us grow revenue by 40% and we saw a 10% increase in conversion rate &mdash; all with lower overhead and far less headache. As a small business, this was a game-changer."</blockquote>
+                <div class="author">Sameer Rai</div>
+                <div class="role">Founder, Sports Infrastructure</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="faq section">
+    <div class="container reveal">
+        <div class="text-center">
+            <span class="eyebrow">Common questions</span>
+            <h2 style="font-family:var(--serif);font-size:clamp(24px,3.5vw,34px)">Before You Book Your Audit</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q"><span>Is the audit really 100% free?</span><span class="arrow">&#9660;</span></div>
+                <div class="faq-a"><p>Yes, completely free. No credit card. No hidden fees. No obligation. We do this because we're confident that once you see the opportunities, you'll want to work with us. But even if you don't, you'll leave with actionable insights you can use immediately.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q"><span>How long does the audit take?</span><span class="arrow">&#9660;</span></div>
+                <div class="faq-a"><p>The audit call is approximately 30 minutes. Within 48 hours after the call, you'll receive your full custom report with ROI projections, an AI readiness score, and a prioritised implementation roadmap.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q"><span>I'm not technical. Is AI right for my business?</span><span class="arrow">&#9660;</span></div>
+                <div class="faq-a"><p>You don't need to be technical at all. That's exactly what we handle. If your business has repetitive tasks, manual data entry, customer communication, or reporting workflows &mdash; AI can help. We handle all the tech so you can focus on running your business.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q"><span>What if AI doesn't work for my industry?</span><span class="arrow">&#9660;</span></div>
+                <div class="faq-a"><p>We work across 8+ industries including manufacturing, healthcare, real estate, logistics, e-commerce, financial services, education, and hospitality. If there's a repetitive process in your business, it can be automated. The audit will tell you exactly where to start.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q"><span>How much does implementation cost?</span><span class="arrow">&#9660;</span></div>
+                <div class="faq-a"><p>We're significantly more affordable than traditional automation firms. Our solutions start from as low as a few hundred dollars per month, with most clients seeing full ROI payback within 14 days to 6 months. The audit will give you exact pricing for your specific needs.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q"><span>What's the catch?</span><span class="arrow">&#9660;</span></div>
+                <div class="faq-a"><p>There's no catch. We offer the free audit because our close rate after audits is very high &mdash; when business owners see the numbers, the decision makes itself. But we never pressure anyone. You'll get genuine value whether you become a client or not.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ AUDIT FORM (Main CTA) ═══════════ -->
+<section class="audit-section" id="audit">
+    <div class="container-wide reveal">
+        <div class="text-center" style="margin-bottom:40px">
+            <span class="eyebrow">Book your free audit</span>
+            <h2 style="font-family:var(--serif);font-size:clamp(26px,4.5vw,40px);line-height:1.2;color:var(--text-inverse)">Get Your Custom AI Roadmap to<br><span style="color:var(--emerald)">Cut Costs &amp; Grow Revenue</span></h2>
+        </div>
+        <div class="audit-grid">
+            <div class="audit-left">
+                <h3>Here's exactly what happens:</h3>
+                <p>You book a free 30-minute call. Our AI specialist analyses your business and hands you a personalised plan &mdash; whether you work with us or not, you keep everything.</p>
+                <ul class="audit-expect">
+                    <li><span class="check">&#10003;</span> <span>We identify <b>which processes are eating your time</b> and which ones can be automated immediately</span></li>
+                    <li><span class="check">&#10003;</span> <span>We show you <b>exactly how much you'll save</b> in costs &mdash; with real numbers, not estimates</span></li>
+                    <li><span class="check">&#10003;</span> <span>We map out <b>revenue opportunities</b> you're missing &mdash; faster lead follow-up, automated sales flows, AI-powered conversion</span></li>
+                    <li><span class="check">&#10003;</span> <span>You get a <b>prioritised implementation roadmap</b> with expected ROI at each stage (2-8 weeks)</span></li>
+                    <li><span class="check">&#10003;</span> <span>You walk away with <b>at least 3 actionable ideas</b> you can implement immediately &mdash; even without us</span></li>
+                </ul>
+                <p style="margin-top:20px;font-size:14px;color:var(--text-inverse-dim)"><b style="color:var(--emerald)">100% free.</b> No obligation. No hard sell. We offer this because when business owners see the numbers, the decision makes itself.</p>
+            </div>
+            <div class="audit-form-box">
+                <h4>Book Your Free Audit</h4>
+                <p class="form-sub">Takes 30 seconds &middot; We'll confirm within 24 hours</p>
+                <form class="audit-form" id="auditForm" onsubmit="return handleAudit(event)">
+                    <input type="text" name="name" placeholder="Full name" required>
+                    <input type="email" name="email" placeholder="Work email" required>
+                    <input type="tel" name="phone" placeholder="Phone number">
+                    <input type="text" name="company" placeholder="Company name">
+                    <select name="industry">
+                        <option value="">Select your industry</option>
+                        <option>Manufacturing</option>
+                        <option>Healthcare</option>
+                        <option>Real Estate</option>
+                        <option>Logistics</option>
+                        <option>E-Commerce</option>
+                        <option>Financial Services</option>
+                        <option>Education</option>
+                        <option>Hospitality</option>
+                        <option>Sports &amp; Infrastructure</option>
+                        <option>Other</option>
+                    </select>
+                    <select name="country">
+                        <option value="">Select your country</option>
+                        <option>UAE</option>
+                        <option>Saudi Arabia</option>
+                        <option>India</option>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>Australia</option>
+                        <option>Singapore</option>
+                        <option>Other</option>
+                    </select>
+                    <button type="submit" class="cta-btn" style="width:100%;justify-content:center;font-size:17px;padding:16px 28px">
+                        Book My Free Audit &rarr;
+                    </button>
+                </form>
+                <div class="audit-secure">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>Your information is 100% secure and never shared</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ FINAL CLOSE ═══════════ -->
+<section style="background:var(--bg2);padding:48px 0;text-align:center">
+    <div class="container">
+        <p style="font-size:18px;color:var(--text-mid);line-height:1.7;max-width:560px;margin:0 auto">Every day without AI automation is <b style="color:var(--text)">lost revenue and wasted overhead</b>. The audit is free. The insights are yours to keep. The only risk is doing nothing.</p>
+        <a href="#audit" class="cta-btn" style="margin-top:24px">Book Free Audit &rarr;</a>
+    </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+    <p>&copy; 2025 <a href="index.html">ROTAS Automation</a>. All rights reserved. | <a href="mailto:hello@rotasautomation.com">hello@rotasautomation.com</a></p>
+</footer>
+
+<!-- ═══════════ STICKY MOBILE CTA ═══════════ -->
+<div class="sticky-cta">
+    <a href="#audit" class="cta-btn">Book Free Audit &rarr;</a>
+</div>
+
+<script>
+/* ── Particle Network (Hero Background) ── */
+(function(){
+    const C=document.getElementById('heroCanvas');
+    if(!C)return;
+    const ctx=C.getContext('2d');
+    let W,H,particles=[],mouse={x:-9999,y:-9999};
+    const N=70,CONNECT=130,MR=160;
+    function resize(){W=C.width=C.parentElement.offsetWidth;H=C.height=C.parentElement.offsetHeight}
+    window.addEventListener('resize',resize);resize();
+    class P{constructor(){this.reset()}
+        reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*.35;this.vy=(Math.random()-.5)*.35;this.r=Math.random()*1.8+.8;this.a=Math.random()*.5+.3}
+        update(){this.x+=this.vx;this.y+=this.vy;
+            if(this.x<0||this.x>W)this.vx*=-1;
+            if(this.y<0||this.y>H)this.vy*=-1;
+            let dx=this.x-mouse.x,dy=this.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);
+            if(d<MR){let f=(MR-d)/MR*.015;this.vx+=dx*f;this.vy+=dy*f}
+            this.vx*=.999;this.vy*=.999}
+        draw(){let g=ctx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.r*3);
+            g.addColorStop(0,`rgba(0,212,170,${this.a})`);g.addColorStop(1,'rgba(0,212,170,0)');
+            ctx.fillStyle=g;ctx.beginPath();ctx.arc(this.x,this.y,this.r*3,0,Math.PI*2);ctx.fill();
+            ctx.fillStyle=`rgba(0,212,170,${this.a+.2})`;ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fill()}}
+    for(let i=0;i<N;i++)particles.push(new P);
+    function animate(){ctx.clearRect(0,0,W,H);
+        for(let i=0;i<N;i++){particles[i].update();particles[i].draw();
+            for(let j=i+1;j<N;j++){let dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);
+                if(d<CONNECT){ctx.strokeStyle=`rgba(0,212,170,${.12*(1-d/CONNECT)})`;ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.stroke()}}}
+        requestAnimationFrame(animate)}
+    animate();
+    C.parentElement.addEventListener('mousemove',e=>{let r=C.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top});
+    C.parentElement.addEventListener('mouseleave',()=>{mouse.x=-9999;mouse.y=-9999});
+})();
+
+/* ── Scroll Reveal ── */
+const revealEls=document.querySelectorAll('.reveal');
+const revObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target)}})},{threshold:.15});
+revealEls.forEach(el=>revObs.observe(el));
+
+/* ── FAQ Accordion ── */
+document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click',()=>{
+        const item=q.parentElement;
+        const wasOpen=item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+        if(!wasOpen)item.classList.add('open');
+    });
+});
+
+/* ── Bar animation on scroll ── */
+const gapObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.gap-bar').forEach(b=>{b.style.transition='width .8s cubic-bezier(.4,0,.2,1)';});gapObs.unobserve(e.target)}})},{threshold:.3});
+document.querySelectorAll('.gap-visual').forEach(el=>gapObs.observe(el));
+
+/* ── Form Handler ── */
+function handleAudit(e){
+    e.preventDefault();
+    const form=e.target;
+    const name=form.querySelector('[name="name"]').value.split(' ')[0];
+    form.parentElement.innerHTML=`<div style="text-align:center;padding:32px 0"><p style="font-size:24px;font-weight:700;color:var(--emerald);margin-bottom:10px">&#10003; You're booked, ${name}!</p><p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.6">We'll be in touch within 24 hours to confirm your audit time slot. Check your email for confirmation.</p><p style="color:rgba(255,255,255,.4);font-size:13px;margin-top:16px">Meanwhile, think about which processes frustrate you most &mdash; we'll tackle those first.</p></div>`;
+    return false;
+}
+
+/* ── Smooth scroll for anchor links ── */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+        const target=document.querySelector(a.getAttribute('href'));
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}
+    });
+});
+</script>
+</body>
+</html>
